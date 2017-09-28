@@ -1,15 +1,10 @@
 declare module 'svgson-loader' {
-	interface SvgsonTag {
-		name: string;
-		attrs: {[index: string]: string};
-		childs: Svgson[];
+	interface Svgson {
+		name?: string;
+		attrs?: {[index: string]: string};
+		childs?: Svgson[];
+		text?: string;
 	}
-
-	interface SvgsonText {
-		text: string;
-	}
-
-	type Svgson = SvgsonTag | SvgsonText;
 
 	export {Svgson};
 }
