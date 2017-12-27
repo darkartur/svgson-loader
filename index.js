@@ -3,7 +3,7 @@ const svgson = require('svgson');
 module.exports = function(content) {
 	const callback = this.async();
 	svgson(content, {
-		svgo: true
+		// uses default svgson cofig
 	}, function(result, err) {
 		if(err) return callback(err);
 		callback(null,
